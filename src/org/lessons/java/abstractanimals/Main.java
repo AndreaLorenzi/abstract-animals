@@ -20,6 +20,22 @@ public class Main {
             animal.sleep();
             animal.eat();
             animal.makeNoise();
+            if (animal instanceof CanSwim) {
+                ((CanSwim) animal).swimmer();
+            } else if (animal instanceof CanFly) {
+                ((CanFly) animal).flyer();
+            } else {
+                System.out.println("I'm playing");
+            }
         }
+    }
+
+    public static void Fly(CanFly iCanFly) {
+        iCanFly.flyer();
+
+    }
+
+    public static void Swim(CanSwim iCanSwim) {
+        iCanSwim.swimmer();
     }
 }
